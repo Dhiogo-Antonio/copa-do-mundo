@@ -1,3 +1,10 @@
+<?php
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+
+$selecaoController = new SelecaoController($pdo);
+$selecoes = $selecaoController->listar();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +23,15 @@
     <input type="number" name="idade" required><br>
 
     <label for="selecao">Seleção representante:</label>
-    <input type="text" name="selecao" required><br>
+<select name="selecao_id" required>
+    <option value="">Selecione</option>
+    <?php foreach ($selecoes as $selecao): ?>
+        <option value="<?= $selecao['id']; ?>">
+            <?= $selecao['id']; ?>
+            <?= $selecao['nome']; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
 
     <select name="cargo" id="cargo">
      <option value="Jogador">Jogador</option>
@@ -40,20 +55,25 @@
 
 <?php 
 
+
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+
+
 
 $usuarioController = new UsuarioController($pdo);
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    
-$nome = $_POST['nome'];  
-$idade = $_POST['idade']; 
-$selecao = $_POST['selecao'];   
-$cargo = $_POST['cargo'];   
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $nome = $_POST['nome'];
+            $idade = $_POST['idade'];
+            $selecao = $_POST['selecao_id'];
+            $cargo = $_POST['cargo'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+
 
 $usuarioController->cadastrar($nome, $idade, $selecao, $cargo, $email, $senha);
 }
+
+
 ?>

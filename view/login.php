@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 $email = $_POST['email'];  
 $senha = $_POST['senha'];
 
-$usuarioController->login($email, $senha);
+// $usuarioController->login($email, $senha);
 
 }
 

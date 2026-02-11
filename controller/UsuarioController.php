@@ -13,9 +13,7 @@ class UsuarioController{
         return $this->usuarioModel->cadastrar($nome, $idade, $selecao, $cargo, $email, $senha);
     }
 
-    public function login($email, $senha){
-        
-    }
+    
 }
 
 ?>
