@@ -27,7 +27,6 @@ $selecoes = $selecaoController->listar();
     <option value="">Selecione</option>
     <?php foreach ($selecoes as $selecao): ?>
         <option value="<?= $selecao['id']; ?>">
-            <?= $selecao['id']; ?>
             <?= $selecao['nome']; ?>
         </option>
     <?php endforeach; ?>
