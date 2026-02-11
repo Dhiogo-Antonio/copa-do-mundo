@@ -10,8 +10,8 @@ class SelecaoController {
         $this->selecaoModel = new SelecaoModel($pdo);
     }
 
-    public function cadastrar($nome, $continente) {
-        return $this->selecaoModel->cadastrar($nome, $continente);
+    public function cadastrar($nome, $continente, $grupo_id) {
+        return $this->selecaoModel->cadastrar($nome, $continente, $grupo_id);
     }
 
     public function listar() {

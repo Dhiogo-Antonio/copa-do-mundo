@@ -8,12 +8,13 @@ class SelecaoModel{
         $this->pdo = $pdo;
     }
 
-   public function cadastrar($nome, $continente){
-    $sql = "INSERT INTO selecoes (nome, continente) VALUES (:nome, :continente)";
+   public function cadastrar($nome, $continente, $grupo_id){
+    $sql = "INSERT INTO selecoes (nome, continente, grupo_id) VALUES (:nome, :continente, :grupo_id)";
     $stmt = $this->pdo->prepare($sql);
     return $stmt->execute([
         ':nome' => $nome,
-        ':continente' => $continente
+        ':continente' => $continente,
+        ':grupo_id' => $grupo_id
         
     ]);
 }
