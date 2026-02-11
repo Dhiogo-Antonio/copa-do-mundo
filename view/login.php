@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+     <link rel="stylesheet" href="css/style1.css">
     <div>
     <form method="post">
      <label for="email">E-mail:</label>
-    <input type="text" name="email" required><br>
+    <input type="email" name="email" required><br>
 
     <label for="senha">Senha:</label>
     <input type="password" name="senha" required><br>
@@ -32,8 +33,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 $email = $_POST['email'];  
 $senha = $_POST['senha'];
 
-// $usuarioController->login($email, $senha);
+$usuarioController->login($email, $senha);
 
+if($usuarioController->login($email, $senha)){
+    header("Location:index.php");
+    exit();
+} else {
+    echo "Email ou senha incorreto.";
+}
 }
 
 ?>

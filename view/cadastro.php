@@ -13,6 +13,7 @@ $selecoes = $selecaoController->listar();
     <title>Document</title>
 </head>
 <body>
+    <link rel="stylesheet" href="css/style1.css">
     <div>
     <form method="post">
 
@@ -27,7 +28,6 @@ $selecoes = $selecaoController->listar();
     <option value="">Selecione</option>
     <?php foreach ($selecoes as $selecao): ?>
         <option value="<?= $selecao['id']; ?>">
-            <?= $selecao['id']; ?>
             <?= $selecao['nome']; ?>
         </option>
     <?php endforeach; ?>
@@ -56,7 +56,7 @@ $selecoes = $selecaoController->listar();
 <?php 
 
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/Turma2/xampp/htdocs/06.02/copa-do-mundo/controller/UsuarioController.php";
 
 
 

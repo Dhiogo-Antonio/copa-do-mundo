@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+     <link rel="stylesheet" href="css/style1.css">
     <h2>Cadastrar Grupo</h2>
 
 <form method="POST">

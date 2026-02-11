@@ -17,6 +17,7 @@ $grupos = $gruposController->listar();
     <title>Document</title>
 </head>
 <body>
+     <link rel="stylesheet" href="css/style1.css">
     <h2>Cadastrar Seleção</h2>
 
 <form method="post">
@@ -46,7 +47,7 @@ $grupos = $gruposController->listar();
 
 <?php 
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/Turma2/xampp/htdocs/06.02/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
 
