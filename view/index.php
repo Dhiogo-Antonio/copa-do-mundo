@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,6 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Seleções e grupos</a></li>
+                <li><a href="#">Classificação</a></li>
+                <li><a href="#">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="usuarios" id="usuarios">
+
+
+    </section>
 </body>
 </html>
+
+<?php
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+
+$usuarioController = new UsuarioController($pdo);
+$selecaoController = new SelecaoController($pdo);
+
+
+$usuarios = $usuarioController->listar();
+$selecoes = $selecaoController->listar();
+
+?>

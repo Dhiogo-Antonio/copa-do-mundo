@@ -1,0 +1,56 @@
+<?php
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+
+$selecaoController = new SelecaoController($pdo);
+$selecoes = $selecaoController->listar();
+
+$usuarioController = new UsuarioController($pdo);
+
+$id = $_GET['id'] ?? null;
+
+if(!$id){
+    die("ID inválido");
+}
+
+$usuario = $usuarioController->buscar($id);
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $usuarioController->atualizar(
+        $id,
+        $_POST['nome'],
+        $_POST['idade'],
+        $_POST['selecao_id'],
+        $_POST['cargo'],
+        $_POST['email']
+    );
+
+    header("Location: index.php");
+    exit;
+}
+?>
+
+<h2>Editar Usuário</h2>
+
+<form method="POST">
+    Nome: <input type="text" name="nome" value="<?= $usuario['nome'] ?>"><br><br>
+
+    Idade: <input type="number" name="idade" value="<?= $usuario['idade'] ?>"><br><br>
+
+<label for="selecao">Seleção representante:</label>
+
+  <select name="selecao_id" required>
+    <option value="">Selecione</option>
+    <?php foreach ($selecoes as $selecao): ?>
+        <option value="<?= $selecao['id']; ?>">
+            <?= $selecao['nome']; ?>
+        </option>
+    <?php endforeach; ?>
+  </select>
+  
+    Cargo: <input type="text" name="cargo" value="<?= $usuario['cargo'] ?>"><br><br>
+    Email: <input type="email" name="email" value="<?= $usuario['email'] ?>"><br><br>
+
+    <button type="submit">Atualizar</button>
+</form>
