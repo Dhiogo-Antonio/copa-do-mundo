@@ -39,7 +39,19 @@ $jogosController = new JogosController($pdo);
 $classificacaoController = new ClassificacaoController($pdo);
 
 $usuarios = $usuarioController->listar();
+echo "<br>
+<a href='cadastro.php'>Cadastrar novo usuário</a>";
+echo "<br>";
+echo "<br>";
 $selecoes = $selecaoController->listar();
+echo "<br>
+<a href='cadastroSelecao.php'>Cadastrar nova seleção</a>";
+echo "<br>";
+echo "<br>";
 $jogos = $jogosController->listar();
+echo "<br>
+<a href='jogos/cadastrar.php'>Cadastrar novo jogo</a>";
+echo "<br>";
+echo "<br>";
 $classificacao = $classificacaoController->casa();
 ?>

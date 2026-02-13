@@ -33,10 +33,11 @@ foreach ($jogos as $jogo) {
     
     echo "<td>
             <a href='jogos/finalizar.php?id={$id}'>Finalizar</a> |
-            <a href='deletar.php?id={$id}'
-               onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
-               Deletar
-            </a> |
+            <a href='jogos/deletar.php?id={$id}'
+       onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
+       Deletar
+      </a>;
+
             <a href='./jogos/cadastrar.php'>Cadastrar</a>
           </td>";
 

@@ -1,13 +1,13 @@
 <?php
-
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/model/JogoModel.php";
+require_once __DIR__ . "/../../db/database.php";
+require_once __DIR__ . "/../../model/JogosModel.php";
 
 $jogosModel = new JogosModel($pdo);
 
-$id = $_GET['id'];
+$id = (int) $_GET['id'];
 
-$jogoModel->deletar($id);
+$jogosModel->deletar($id);
 
-header("Location: listar.php");
+header("Location: ../index.php");
 exit;
+?>
