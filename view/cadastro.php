@@ -16,7 +16,7 @@ $selecoes = $selecaoController->listar();
 </head>
 
 <body>
-    <div>
+    <div class="">
         <form method="post">
 
             <label for="nome">Nome:</label>
@@ -59,7 +59,7 @@ $selecoes = $selecaoController->listar();
 <?php
 
 
-require_once "C:/Turma2/xampp/htdocs/06.02/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 
 
 
