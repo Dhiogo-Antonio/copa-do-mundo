@@ -4,7 +4,7 @@ require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
-$selecoes = $selecaoController->listar();
+
 
 $usuarioController = new UsuarioController($pdo);
 
