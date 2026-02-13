@@ -42,7 +42,7 @@ foreach ($jogos as $jogo) {
     
     echo "<td>
             <a href='jogos/finalizar.php?id={$id}' class='btn-finalizar'>Finalizar</a> |
-            <a href='deletar.php?id={$id}' class='btn-deletar'
+            <a href='jogos/deletar.php?id={$id}' class='btn-deletar'
                onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
                Deletar
             </a> |

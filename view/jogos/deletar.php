@@ -1,13 +1,16 @@
 <?php
-require_once __DIR__ . "/../../db/database.php";
-require_once __DIR__ . "/../../model/JogosModel.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
 
-$jogosModel = new JogosModel($pdo);
+$jogosController = new JogosController($pdo);
 
-$id = (int) $_GET['id'];
+$id = $_GET['id'] ?? null;
 
-$jogosModel->deletar($id);
+if (!$id) {
+    die("ID inválido");
+}
+
+$jogosController->deletar((int)$id);
 
 header("Location: ../index.php");
 exit;
-?>
