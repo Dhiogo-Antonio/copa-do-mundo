@@ -28,8 +28,8 @@ foreach($classificacao as $classificacoes){
 
     echo "<tr>";
     echo "<td>{$id}</td>";
-    echo "<td>{$classificacoes['grupo_id']}</td>";
-    echo "<td>{$classificacoes['selecao_id']}</td>";
+    echo "<td>{$classificacoes['grupo_nome']}</td>";
+    echo "<td>{$classificacoes['selecao_nome']}</td>";
     echo "<td>".($classificacoes['pontos'] ?? 'Sem pontos')."</td>";
     echo "<td>".($classificacoes['jogos'] ?? 'Sem jogos')."</td>";
     echo "<td>".($classificacoes['vitorias'] ?? 'Nenhuma partida ganha')."</td>";

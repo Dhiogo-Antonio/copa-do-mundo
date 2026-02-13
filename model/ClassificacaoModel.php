@@ -57,22 +57,29 @@ class ClassificacaoModel {
         ]);
     }
 public function listarTodos() {
-    $sql = "SELECT 
-                id,
-                grupo_id,
-                selecao_id,
-                pontos,
-                jogos,
-                vitorias,
-                empates,
-                derrotas,
-                gols_pro,
-                gols_contra,
-                saldo_gols
-            FROM classificacao
-            ORDER BY id ASC";
+    $sql = "
+        SELECT 
+            c.id,
+            c.grupo_id,
+            g.nome AS grupo_nome,
+            c.selecao_id,
+            s.nome AS selecao_nome,
+            c.pontos,
+            c.jogos,
+            c.vitorias,
+            c.empates,
+            c.derrotas,
+            c.gols_pro,
+            c.gols_contra,
+            c.saldo_gols
+        FROM classificacao c
+        INNER JOIN selecoes s ON c.selecao_id = s.id
+        INNER JOIN grupos g ON c.grupo_id = g.id
+        ORDER BY c.grupo_id ASC, c.pontos DESC, c.saldo_gols DESC, c.gols_pro DESC
+    ";
 
-    return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $this->pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 

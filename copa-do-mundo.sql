@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/02/2026 às 12:46
+-- Tempo de geração: 13/02/2026 às 14:28
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -41,6 +41,14 @@ CREATE TABLE `classificacao` (
   `saldo_gols` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `classificacao`
+--
+
+INSERT INTO `classificacao` (`id`, `grupo_id`, `selecao_id`, `pontos`, `jogos`, `vitorias`, `empates`, `derrotas`, `gols_pro`, `gols_contra`, `saldo_gols`) VALUES
+(9, 8, 65, 123, 32312, 21312, 4142, 42, 2, 56, 67),
+(11, 7, 64, 12, 1, 1, 1, 12, 2, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -57,8 +65,8 @@ CREATE TABLE `grupos` (
 --
 
 INSERT INTO `grupos` (`id`, `nome`) VALUES
-(7, '1'),
-(8, '2');
+(7, 'A'),
+(8, 'B');
 
 -- --------------------------------------------------------
 
@@ -82,8 +90,8 @@ CREATE TABLE `jogos` (
 --
 
 INSERT INTO `jogos` (`id`, `grupo_id`, `selecao_casa_id`, `selecao_fora_id`, `gols_casa`, `gols_fora`, `data_jogo`, `status`) VALUES
-(1, 7, 64, 65, 0, 0, '1901-02-23 07:53:00', 'agendado'),
-(2, 8, 64, 64, 4, 4, '2026-02-13 08:59:00', 'finalizado');
+(1, 7, 64, 65, 6, 28, '1901-02-23 07:53:00', 'finalizado'),
+(2, 8, 64, 64, 21, 2, '2026-02-13 08:59:00', 'finalizado');
 
 -- --------------------------------------------------------
 
@@ -95,25 +103,19 @@ CREATE TABLE `selecoes` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `continente` varchar(50) NOT NULL,
-  `grupo_id` int(11) DEFAULT NULL,
-  `pontos` int(11) DEFAULT 0,
-  `vitorias` int(11) DEFAULT 0,
-  `empates` int(11) DEFAULT 0,
-  `derrotas` int(11) DEFAULT 0,
-  `gols_marcados` int(11) DEFAULT 0,
-  `gols_sofridos` int(11) DEFAULT 0,
-  `saldo_gols` int(11) DEFAULT 0
+  `grupo_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `selecoes`
 --
 
-INSERT INTO `selecoes` (`id`, `nome`, `continente`, `grupo_id`, `pontos`, `vitorias`, `empates`, `derrotas`, `gols_marcados`, `gols_sofridos`, `saldo_gols`) VALUES
-(64, 'Brasil', 'América do Sul', 7, 0, 0, 0, 0, 0, 0, 0),
-(65, 'Brasil', 'América do Sul', 7, 0, 0, 0, 0, 0, 0, 0),
-(66, 'Brasil', 'América do Sul', 8, 0, 0, 0, 0, 0, 0, 0),
-(67, 'Brasil', 'América do Sul', 8, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `selecoes` (`id`, `nome`, `continente`, `grupo_id`) VALUES
+(64, 'Brasil', 'América do Sul', 7),
+(65, 'Brasil', 'América do Sul', 7),
+(66, 'Brasil', 'América do Sul', 8),
+(67, 'Brasil', 'América do Sul', 8),
+(68, 'França', 'Europa', 8);
 
 -- --------------------------------------------------------
 
@@ -190,7 +192,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `classificacao`
 --
 ALTER TABLE `classificacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `grupos`
@@ -208,7 +210,7 @@ ALTER TABLE `jogos`
 -- AUTO_INCREMENT de tabela `selecoes`
 --
 ALTER TABLE `selecoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`

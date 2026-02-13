@@ -14,13 +14,6 @@ echo "<tr>
         <th>Nome</th>
         <th>Continente</th>
         <th>Grupo</th>
-        <th>Pontos</th>
-        <th>Vitórias</th>
-        <th>Empates</th>
-        <th>Derrotas</th>
-        <th>Gols Marcados</th>
-        <th>Gols Sofridos</th>
-        <th>Saldo de Gols</th>
         <th>Ações</th>
       </tr>";
 
@@ -31,14 +24,8 @@ foreach($selecoes as $selecao){
     echo "<td>{$id}</td>";
     echo "<td>{$selecao['nome']}</td>";
     echo "<td>{$selecao['continente']}</td>";
-    echo "<td>{$selecao['grupo_id']}</td>";
-    echo "<td>".($selecao['pontos'] ?? 'Sem pontos')."</td>";
-    echo "<td>".($selecao['vitorias'] ?? 'Nenhuma partida ganha')."</td>";
-    echo "<td>".($selecao['empates'] ?? 'Sem empates')."</td>";
-    echo "<td>".($selecao['derrotas'] ?? 'Sem derrotas')."</td>";
-    echo "<td>".($selecao['gols_marcados'] ?? 'Sem gols marcados')."</td>";
-    echo "<td>".($selecao['gols_sofridos'] ?? 'Sem gols sofridos')."</td>";
-    echo "<td>".($selecao['saldo_gols'] ?? 'Sem saldo de gols')."</td>";
+    echo "<td>{$selecao['grupo_nome']}</td>";
+
   
     echo "<td>
             <a href='editarselecao.php?id={$id}'>Editar</a> |
