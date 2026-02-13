@@ -33,7 +33,7 @@ $jogo = $jogosController->buscarPorId($id);
     <title>Finalizar Jogo</title>
 </head>
 <body>
-
+<link rel="stylesheet" href="../css/style2.css">
 <h2>Finalizar Jogo</h2>
 
 <form method="POST">
