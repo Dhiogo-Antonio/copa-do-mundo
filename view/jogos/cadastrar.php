@@ -13,55 +13,59 @@ $grupos = $gruposController->listar();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style2.css">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Cadastrar Jogo</h2>
 
-<form method="POST">
+    <form method="POST">
 
-    <label>Grupo:</label>
-    <select name="grupo_id" required>
-        <option value="">Selecione</option>
-        <?php foreach ($grupos as $grupo): ?>
-            <option value="<?= $grupo['id']; ?>">
-                Grupo <?= $grupo['nome']; ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-    <br><br>
+        <label>Grupo:</label>
+        <select name="grupo_id" required>
+            <option value="">Selecione</option>
+            <?php foreach ($grupos as $grupo): ?>
+                <option value="<?= $grupo['id']; ?>">
+                    Grupo <?= $grupo['nome']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <br><br>
 
-    <label>Time Casa:</label>
-    <select name="casa_id" required>
-        <?php foreach ($selecoes as $s): ?>
-            <option value="<?= $s['id']; ?>">
-                <?= $s['nome']; ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-    <br><br>
+        <label>Time Casa:</label>
+        <select name="casa_id" required>
+            <?php foreach ($selecoes as $s): ?>
+                <option value="<?= $s['id']; ?>">
+                    <?= $s['nome']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <br><br>
 
-    <label>Time Fora:</label>
-    <select name="fora_id" required>
-        <?php foreach ($selecoes as $s): ?>
-            <option value="<?= $s['id']; ?>">
-                <?= $s['nome']; ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-    <br><br>
+        <label>Time Fora:</label>
+        <select name="fora_id" required>
+            <?php foreach ($selecoes as $s): ?>
+                <option value="<?= $s['id']; ?>">
+                    <?= $s['nome']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <br><br>
 
-    <label>Data do Jogo:</label>
-    <input type="datetime-local" name="data_jogo" required>
-    <br><br>
+        <label>Data do Jogo:</label>
+        <input type="datetime-local" name="data_jogo" required>
+        <br><br>
 
-    <button type="submit">Cadastrar</button>
+        <button type="submit">Cadastrar</button>
 
-</form>
+    </form>
 </body>
+
 </html>
 
 <?php
@@ -86,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = $_POST['data_jogo'];
 
     $jogosController->cadastrar($grupo, $casa, $fora, $data);
-    
+
 
     header("Location: ../index.php");
     exit;
