@@ -5,13 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="view/css/style.css">
-    <title>Document</title>
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            
+            padding: 200;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Usuários</a></li>
+                <li><a href="#usuarios">Usuários</a></li>
                 <li><a href="#">Seleções e grupos</a></li>
                 <li><a href="#">Classificação</a></li>
                 <li><a href="#">Jogos</a></li>
@@ -21,8 +62,8 @@
 
     <section class="usuarios" id="usuarios">
 
-
     </section>
+    
 </body>
 </html>
 

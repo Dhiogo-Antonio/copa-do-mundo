@@ -3,7 +3,7 @@ require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
-$selecoes = $selecaoController->listar();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,7 +56,7 @@ $selecoes = $selecaoController->listar();
 <?php 
 
 
-require_once "C:/Turma2/xampp/htdocs/06.02/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 
 
 
