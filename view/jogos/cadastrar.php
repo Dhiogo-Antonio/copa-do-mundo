@@ -1,7 +1,7 @@
 <?php
-require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
 
 $selecaoController = new SelecaoController($pdo);
 $selecoes = $selecaoController->buscarSelecao();
@@ -76,10 +76,10 @@ $grupos = $gruposController->listar();
 
 <?php
 
-require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $jogosController = new JogosController($pdo);
 $gruposController = new GruposController($pdo);

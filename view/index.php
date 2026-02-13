@@ -48,11 +48,11 @@
 </html>
 
 <?php
-require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
 
 $usuarioController = new UsuarioController($pdo);
 $selecaoController = new SelecaoController($pdo);

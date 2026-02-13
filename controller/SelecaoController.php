@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/xampp/htdocs/copa-do-mundo/model/SelecaoModel.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/model/SelecaoModel.php";
 
 class SelecaoController {
 
@@ -39,10 +39,5 @@ public function deletar($id){
     public function atualizar($id, $nome, $continente, $grupo_id){
         return $this->selecaoModel->atualizar($id, $nome, $continente, $grupo_id);
     }
-
-
-
-
-
 
 }

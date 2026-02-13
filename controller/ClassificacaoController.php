@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/xampp/htdocs/copa-do-mundo/model/ClassificacaoModel.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/model/ClassificacaoModel.php";
 
 class ClassificacaoController {
 
@@ -12,7 +12,7 @@ class ClassificacaoController {
 
     public function listar($grupo_id) {
         $classificacao = $this->classificacaoModel->listarPorGrupo($grupo_id);
-        include "C:/xampp/htdocs/copa-do-mundo/view/listar.php";
+        include "C:/turma2/xampp/htdocs/copa-do-mundo/view/listar.php";
     }
 
   public function casa() {

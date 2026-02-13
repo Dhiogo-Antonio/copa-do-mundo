@@ -1,6 +1,6 @@
 <?php
-require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
 $selecoes = $selecaoController->buscarSelecao();
@@ -60,7 +60,7 @@ $selecoes = $selecaoController->buscarSelecao();
 <?php
 
 
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 
 
 

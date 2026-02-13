@@ -1,6 +1,6 @@
 <?php
-require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 
 $usuarioController = new UsuarioController($pdo);
 
