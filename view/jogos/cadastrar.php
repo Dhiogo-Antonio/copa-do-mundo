@@ -62,6 +62,7 @@ $grupos = $gruposController->listar();
         <br><br>
 
         <button type="submit">Cadastrar</button>
+        <button type="submit">Voltar</button>
 
     </form>
 </body>
