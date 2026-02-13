@@ -19,6 +19,12 @@ class SelecaoModel{
     ]);
 }
 
+public function buscarSelecao() {
+    $sql = "SELECT * FROM selecoes ORDER BY nome ASC";
+    return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 public function listarTodos() {
     $sql = "SELECT 
                 id,

@@ -8,6 +8,8 @@ $selecoes = $selecaoController->listar();
 
 $usuarioController = new UsuarioController($pdo);
 
+$selecoes = $selecaoController->buscarSelecao();
+
 $id = $_GET['id'] ?? null;
 
 if(!$id){

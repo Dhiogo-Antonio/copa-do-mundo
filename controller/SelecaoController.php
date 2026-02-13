@@ -15,6 +15,11 @@ class SelecaoController {
         return $this->selecaoModel->cadastrar($nome, $continente, $grupo_id);
     }
 
+    public function buscarSelecao() {
+    return $this->selecaoModel->buscarSelecao();
+}
+
+
     public function listar() {
     $selecoes = $this->selecaoModel->listarTodos();
     require __DIR__ . '/../View/listarselecao.php';

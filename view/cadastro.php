@@ -3,7 +3,7 @@ require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
-
+$selecoes = $selecaoController->buscarSelecao();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -76,6 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $usuarioController->cadastrar($nome, $idade, $selecao, $cargo, $email, $senha);
+
+    header("Location: index.php");
 }
 
 
