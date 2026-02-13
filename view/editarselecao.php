@@ -3,7 +3,7 @@ require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
-$selecoes = $selecaoController->listar();
+
 
 
 $id = $_GET['id'] ?? null;
@@ -26,8 +26,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     exit;
 }
 ?>
+<link rel="stylesheet" href="css/style2.css">
 
-<h2>Editar Seleção</h2>
 
 <form method="POST">
     Nome: <input type="text" name="nome" value="<?= $selecao['nome'] ?>"><br><br>
@@ -37,4 +37,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     Grupo: <input type="number" name="grupo" value="<?= $selecao['grupo_id'] ?>"><br><br>
 
     <button type="submit">Atualizar</button>
+    <a href="index.php" class="btn-voltar">Voltar</a>
 </form>

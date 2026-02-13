@@ -1,47 +1,50 @@
 <?php
-echo"<section id='#classificacoes'>";
+echo "<section id='classificacoes'>";
+
+echo "<h1>Classificação</h1>";
+
 if(empty($classificacao)){
     echo "<p>Nenhuma classificação encontrada</p>";
-    
     return;
 }
 
-echo "<table border='1' cellpadding='5' cellspacing='0'>";
+// Começo da tabela estilizada
+echo "<table id='classificacao' class='tabela-classificacao'>";
+echo "<thead>
+        <tr>
+            <th>ID</th>
+            <th>Grupo</th>
+            <th>Seleção</th>
+            <th>Pontos</th>
+            <th>Jogos</th>
+            <th>Vitórias</th>
+            <th>Empates</th>
+            <th>Derrotas</th>
+            <th>Gols Pro</th>
+            <th>Gols Contra</th>
+            <th>Saldo de Gols</th>
+        </tr>
+      </thead>
+      <tbody>";
 
-
-echo "<tr>
-        <th>ID</th>
-        <th>Grupo</th>
-        <th>Seleção</th>
-        <th>Pontos</th>
-        <th>Jogos</th>
-        <th>Vitórias</th>
-        <th>Empates</th>
-        <th>Derrotas</th>
-        <th>Gols Pro</th>
-        <th>Gols Contra</th>
-        <th>Saldo de Gols</th>
-      </tr>";
-
-foreach($classificacao as $classificacoes){
-    $id = $classificacoes['id'];
+foreach($classificacao as $classificacaoItem){
+    $id = $classificacaoItem['id'];
 
     echo "<tr>";
     echo "<td>{$id}</td>";
-    echo "<td>{$classificacoes['grupo_nome']}</td>";
-    echo "<td>{$classificacoes['selecao_nome']}</td>";
-    echo "<td>".($classificacoes['pontos'] ?? 'Sem pontos')."</td>";
-    echo "<td>".($classificacoes['jogos'] ?? 'Sem jogos')."</td>";
-    echo "<td>".($classificacoes['vitorias'] ?? 'Nenhuma partida ganha')."</td>";
-    echo "<td>".($classificacoes['empates'] ?? 'Sem empates')."</td>";
-    echo "<td>".($classificacoes['derrotas'] ?? 'Sem derrotas')."</td>";
-    echo "<td>".($classificacoes['gols_pro'] ?? 'Sem gols marcados')."</td>";
-    echo "<td>".($classificacoes['gols_contra'] ?? 'Sem gols sofridos')."</td>";
-    echo "<td>".($classificacoes['saldo_gols'] ?? 'Sem saldo de gols')."</td>";
+    echo "<td>{$classificacaoItem['grupo_nome']}</td>";
+    echo "<td>{$classificacaoItem['selecao_nome']}</td>";
+    echo "<td>".($classificacaoItem['pontos'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['jogos'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['vitorias'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['empates'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['derrotas'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['gols_pro'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['gols_contra'] ?? '0')."</td>";
+    echo "<td>".($classificacaoItem['saldo_gols'] ?? '0')."</td>";
     echo "</tr>";
 }
-echo "</table>";
 
+echo "</tbody></table>";
 echo "</section>";
-
 ?>

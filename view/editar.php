@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <link rel="stylesheet" href="css/style2.css">
-<h2>Editar Usuário</h2>
 
 <form method="POST">
     Nome: <input type="text" name="nome" value="<?= $usuario['nome'] ?>"><br><br>
@@ -60,4 +59,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Email: <input type="email" name="email" value="<?= $usuario['email'] ?>"><br><br>
 
     <button type="submit">Atualizar</button>
+    <a href="index.php" class="btn-voltar">Voltar</a>
 </form>

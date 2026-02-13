@@ -1,25 +1,30 @@
 <?php
 
+echo "<section id='jogos'>";
+
 if (empty($jogos)) {
     echo "<p>Nenhum jogo encontrado</p>";
     return;
 }
 
-echo "<table border='1' cellpadding='5' cellspacing='0'>";
+echo "<h1>Jogos do dia</h1>";
 
-echo "<tr>
-        <th>ID</th>
-        <th>Grupo</th>
-        <th>Casa</th>
-        <th>Placar</th>
-        <th>Fora</th>
-        <th>Data</th>
-        <th>Status</th>
-        <th>Ações</th>
-      </tr>";
+echo "<table class='tabela-jogos'>";
+echo "<thead>
+        <tr>
+            <th>ID</th>
+            <th>Grupo</th>
+            <th>Casa</th>
+            <th>Placar</th>
+            <th>Fora</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>";
 
 foreach ($jogos as $jogo) {
-
     $id = $jogo['id'];
 
     echo "<tr>";
@@ -32,16 +37,14 @@ foreach ($jogos as $jogo) {
     echo "<td>{$jogo['status']}</td>";
     
     echo "<td>
-            <a href='jogos/finalizar.php?id={$id}'>Finalizar</a> |
-            <a href='deletar.php?id={$id}'
-               onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
-               Deletar
-            </a> |
-            <a href='./jogos/cadastrar.php'>Cadastrar</a>
+            <a href='jogos/finalizar.php?id={$id}' class='btn-finalizar'>Finalizar</a> |
+            <a href='deletar.php?id={$id}' class='btn-deletar'
+               onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">Deletar</a> |
+            <a href='./jogos/cadastrar.php' class='btn-cadastrar'>Cadastrar</a>
           </td>";
 
     echo "</tr>";
 }
 
-echo "</table>";
+echo "</tbody></table>";
 ?>

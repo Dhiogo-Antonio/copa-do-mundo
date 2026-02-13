@@ -4,25 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="view/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="fundo-colorido">
-    <header>
+    <header class="fundo-colorido">
+        <div class="logo">
+        <img src="../img/logo-fifa.webp" alt="">
+        </div>
+        
+        <div class="navegacao">
+        <h1>Copa do Mundo</h1>
+    
         <nav>
             <ul>
                 <li><a href="#usuarios">Usuários</a></li>
-                <li><a href="#">Seleções e grupos</a></li>
-                <li><a href="#">Classificação</a></li>
-                <li><a href="#">Jogos</a></li>
+                <li><a href="#selecoes">Seleções e Grupos</a></li>
+                <li><a href="#classificacao">Classificação</a></li>
+                <li><a href="#jogos">Jogos</a></li>
             </ul>
         </nav>
+        </div>
     </header>
 
-    <section class="usuarios" id="usuarios">
+    
+<section class="boas-vindas">
+    <div class="container">
+        <h1>Bem-vindo a Copa do Mundo 2026</h1>
+        <p>
+            Aqui você poderá acompanhar usuários, seleções, classificações e jogos de forma rápida e interativa.
+        </p>
+        <p>
+            Explore os dados, confira os destaques e fique por dentro de todas as novidades do maior evento de futebol do planeta!
+        </p>
 
-    </section>
+        <a href="#usuarios" class="btn-explorar">Explorar Dashboard</a>
+    </div>
+</section>
+
+
+   
 </body>
 </html>
 

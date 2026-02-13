@@ -38,17 +38,8 @@ class UsuarioModel {
         ':senha' => $senha
     ]);
    }
-    public function login($email, $senha) {
-        $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([
-            ':email' => $email,
-            ':senha' => $senha
-        ]);
+  
 
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-       
-}
 
 public function buscarPorId($id){
     $sql = "SELECT * FROM usuarios WHERE id = :id";
