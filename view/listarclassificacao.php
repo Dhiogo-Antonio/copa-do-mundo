@@ -4,11 +4,13 @@ echo "<section id='classificacoes'>";
 echo "<h1>Classificação</h1>";
 
 if(empty($classificacao)){
-    echo "<p>Nenhuma classificação encontrada</p>";
+    echo "<div class='links'>";
+    echo "<p>Nenhuma Classificação encontrada!</p>";
+echo "</div>";
     return;
 }
 
-// Começo da tabela estilizada
+
 echo "<table id='classificacao' class='tabela-classificacao'>";
 echo "<thead>
         <tr>

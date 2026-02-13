@@ -4,7 +4,11 @@ echo "<section id='selecoes'>";
 echo "<h1>Seleções Cadastradas</h1>";
 
 if(empty($selecoes)){
-    echo "<p>Nenhuma seleção encontrada</p>";
+    echo "<div class='links'>";
+    echo "<p>Nenhuma seleção encontrada!</p>";
+    echo "<br>
+<a href='cadastro.php' class='cadastro'>Cadastrar seleção</a>";
+echo "</div>";
     return;
 }
 

@@ -4,7 +4,11 @@ echo "<section id='usuarios'>";
 echo "<h1>Gerenciamento de Usuários</h1>";
 
 if(empty($usuarios)){
-    echo "<p>Nenhum usuário encontrado</p>";
+    echo "<div class='links'>";
+    echo "<p>Nenhum usuário encontrado!</p>";
+    echo "<br>
+<a href='cadastro.php' class='cadastro'>Cadastrar novo usuário</a>";
+echo "</div>";
     return;
 }
 

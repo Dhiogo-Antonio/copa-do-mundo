@@ -388,4 +388,14 @@
     background-color: #3b3838;
 }
 
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem;
+}
 
+.cadastro{
+    color: blue;
+    text-decoration: underline;
+}
