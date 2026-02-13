@@ -49,7 +49,7 @@ $jogo = $jogosController->buscarPorId($id);
 </form>
 
 <br>
-<a href="listar.php">Voltar</a>
+<a href="../index.php">Voltar</a>
 
 </body>
 </html>

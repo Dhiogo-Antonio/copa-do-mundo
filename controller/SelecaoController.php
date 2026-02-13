@@ -22,8 +22,10 @@ class SelecaoController {
 
     public function listar() {
     $selecoes = $this->selecaoModel->listarTodos();
-    require __DIR__ . '/../View/listarselecao.php';
+    require __DIR__ . '/../view/listarselecao.php';
 }
+
+
 
 public function deletar($id){
     return $this->selecaoModel->deletar($id);

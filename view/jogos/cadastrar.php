@@ -1,3 +1,16 @@
+<?php
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+
+$selecaoController = new SelecaoController($pdo);
+$selecoes = $selecaoController->buscarSelecao();
+
+$gruposController = new GruposController($pdo);
+
+$grupos = $gruposController->listar();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $jogosController->cadastrar($grupo, $casa, $fora, $data);
 
 
-    header("Location: listar.php");
+    header("Location: ../index.php");
     exit;
 }
 ?>

@@ -70,6 +70,7 @@ class JogosModel {
     return $stmt->execute([':id' => $id]);
 }
 
+
 }
 
 

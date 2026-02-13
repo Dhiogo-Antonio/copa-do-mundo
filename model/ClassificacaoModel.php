@@ -56,4 +56,101 @@ class ClassificacaoModel {
             ':selecao' => $selecao_id
         ]);
     }
+public function listarTodos() {
+    $sql = "
+        SELECT 
+            c.id,
+            c.grupo_id,
+            g.nome AS grupo_nome,
+            c.selecao_id,
+            s.nome AS selecao_nome,
+            c.pontos,
+            c.jogos,
+            c.vitorias,
+            c.empates,
+            c.derrotas,
+            c.gols_pro,
+            c.gols_contra,
+            c.saldo_gols
+        FROM classificacao c
+        INNER JOIN selecoes s ON c.selecao_id = s.id
+        INNER JOIN grupos g ON c.grupo_id = g.id
+        ORDER BY c.grupo_id ASC, c.pontos DESC, c.saldo_gols DESC, c.gols_pro DESC
+    ";
+
+    $stmt = $this->pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+public function processarResultado($jogo_id, $gols_casa, $gols_fora) {
+
+    // Buscar informações do jogo
+    $stmt = $this->pdo->prepare("
+        SELECT grupo_id, selecao_casa_id, selecao_fora_id
+        FROM jogos
+        WHERE id = :id
+    ");
+
+    $stmt->execute([':id' => $jogo_id]);
+    $jogo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $grupo = $jogo['grupo_id'];
+    $casa  = $jogo['selecao_casa_id'];
+    $fora  = $jogo['selecao_fora_id'];
+
+    // Atualiza casa
+    $this->atualizarTime($grupo, $casa, $gols_casa, $gols_fora);
+
+    // Atualiza fora
+    $this->atualizarTime($grupo, $fora, $gols_fora, $gols_casa);
+}
+
+
+private function atualizarTime($grupo, $selecao, $golsPro, $golsContra) {
+
+    $pontos = 0;
+    $vitoria = 0;
+    $empate = 0;
+    $derrota = 0;
+
+    if ($golsPro > $golsContra) {
+        $pontos = 3;
+        $vitoria = 1;
+    } elseif ($golsPro == $golsContra) {
+        $pontos = 1;
+        $empate = 1;
+    } else {
+        $derrota = 1;
+    }
+
+    $stmt = $this->pdo->prepare("
+        UPDATE classificacao
+        SET
+            jogos = jogos + 1,
+            pontos = pontos + :p,
+            vitorias = vitorias + :v,
+            empates = empates + :e,
+            derrotas = derrotas + :d,
+            gols_pro = gols_pro + :gp,
+            gols_contra = gols_contra + :gc,
+            saldo_gols = saldo_gols + (:gp - :gc)
+        WHERE grupo_id = :grupo
+        AND selecao_id = :sel
+    ");
+
+    $stmt->execute([
+        ':p' => $pontos,
+        ':v' => $vitoria,
+        ':e' => $empate,
+        ':d' => $derrota,
+        ':gp' => $golsPro,
+        ':gc' => $golsContra,
+        ':grupo' => $grupo,
+        ':sel' => $selecao
+    ]);
+}
+
+
+
 }

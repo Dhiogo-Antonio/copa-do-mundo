@@ -26,22 +26,20 @@ public function buscarSelecao() {
 
 
 public function listarTodos() {
-    $sql = "SELECT 
-                id,
-                nome,
-                continente,
-                grupo_id,
-                pontos,
-                vitorias,
-                empates,
-                derrotas,
-                gols_marcados,
-                gols_sofridos,
-                saldo_gols
-            FROM selecoes
-            ORDER BY nome ASC";
+    $sql = "
+        SELECT 
+            s.id,
+            s.nome,
+            s.continente,
+            s.grupo_id,
+            g.nome AS grupo_nome
+        FROM selecoes s
+        INNER JOIN grupos g ON s.grupo_id = g.id
+        ORDER BY s.nome ASC
+    ";
 
-    return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $this->pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
