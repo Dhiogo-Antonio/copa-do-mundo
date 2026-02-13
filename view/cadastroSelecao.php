@@ -14,13 +14,12 @@ $grupos = $gruposController->listar();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style1.css">
     <title>Document</title>
+   
+    
 </head>
 <body>
-     <link rel="stylesheet" href="css/style1.css">
-    <h2>Cadastrar Seleção</h2>
-
+      <link rel="stylesheet" href="css/style2.css">
 <form method="post">
 
     <label>Nome:</label>
