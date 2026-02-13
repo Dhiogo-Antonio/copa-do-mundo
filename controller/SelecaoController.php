@@ -9,6 +9,7 @@ class SelecaoController {
     public function __construct($pdo) {
         $this->selecaoModel = new SelecaoModel($pdo);
     }
+    
 
     public function cadastrar($nome, $continente, $grupo_id) {
         return $this->selecaoModel->cadastrar($nome, $continente, $grupo_id);
