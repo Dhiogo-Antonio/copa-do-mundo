@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     exit;
 }
 ?>
-
+<link rel="stylesheet" href="css/style2.css">
 <h2>Editar Usuário</h2>
 
 <form method="POST">
