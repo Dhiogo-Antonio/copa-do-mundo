@@ -71,5 +71,5 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #292525;
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
 }
