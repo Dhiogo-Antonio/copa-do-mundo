@@ -7,7 +7,7 @@ if(empty($selecoes)){
     echo "<div class='links'>";
     echo "<p>Nenhuma seleção encontrada!</p>";
     echo "<br>
-<a href='cadastro.php' class='cadastro'>Cadastrar seleção</a>";
+<a href='cadastroSelecao.php' class='cadastro'>Cadastrar seleção</a>";
 echo "</div>";
     return;
 }

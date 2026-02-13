@@ -6,7 +6,7 @@ if (empty($jogos)) {
     echo "<div class='links'>";
     echo "<p>Nenhum jogo encontrado!</p>";
     echo "<br>
-<a href='cadastro.php' class='cadastro'>Cadastrar jogo</a>";
+<a href='./jogos/cadastrar.php' class='cadastro'>Cadastrar jogo</a>";
 echo "</div>";
     return;
 }

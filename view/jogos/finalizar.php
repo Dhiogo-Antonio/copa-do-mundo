@@ -46,10 +46,11 @@ $jogo = $jogosController->buscarPorId($id);
     <br><br>
 
     <button type="submit">Finalizar</button>
+    <br>
+<a href="../index.php">Voltar</a>
 </form>
 
-<br>
-<a href="../index.php">Voltar</a>
+
 
 </body>
 </html>

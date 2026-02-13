@@ -20,9 +20,13 @@ $grupos = $gruposController->listar();
     <link rel="stylesheet" href="../css/style2.css">
     <title>Document</title>
 </head>
+<style>
+    body{
+        background-color: #c9c5c5;
+    }
+</style>
 
 <body>
-    <h2>Cadastrar Jogo</h2>
 
     <form method="POST">
 
@@ -57,12 +61,12 @@ $grupos = $gruposController->listar();
         </select>
         <br><br>
 
-        <label>Data do Jogo:</label>
+        <label>Data do Jogo:</label><br>
         <input type="datetime-local" name="data_jogo" required>
         <br><br>
 
-        <button type="submit">Cadastrar</button>
-        <button type="submit">Voltar</button>
+        <button type="submit">Cadastrar</button><br>
+        <a href="../index.php">Voltar</a>
 
     </form>
 </body>

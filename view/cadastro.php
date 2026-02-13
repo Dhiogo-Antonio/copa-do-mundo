@@ -48,9 +48,10 @@ $selecoes = $selecaoController->buscarSelecao();
             <label for="senha">Senha:</label>
             <input type="password" name="senha" required><br>
 
-            <input type="submit">
+            <input type="submit"><br>
+            <a href="index.php" class="btn-voltar">Voltar</a>
 
-        </form>
+        </form> 
     </div>
 </body>
 

@@ -32,7 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 ?>
+
 <link rel="stylesheet" href="css/style2.css">
+
+
 
 <form method="POST">
     Nome: <input type="text" name="nome" value="<?= $usuario['nome'] ?>"><br><br>

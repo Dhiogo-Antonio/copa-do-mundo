@@ -18,8 +18,7 @@ $grupos = $gruposController->listar();
     <title>Document</title>
 </head>
 <body>
-     <link rel="stylesheet" href="css/style1.css">
-    <h2>Cadastrar Seleção</h2>
+     <link rel="stylesheet" href="css/style2.css">
 
 <form method="post">
 
@@ -39,6 +38,7 @@ $grupos = $gruposController->listar();
 </select>
 
     <input type="submit" value="Cadastrar">
+    <a href="index.php">Voltar</a>
 
 </form>
 
