@@ -8,15 +8,27 @@ class SelecaoModel{
         $this->pdo = $pdo;
     }
 
-   public function cadastrar($nome, $continente, $grupo_id){
-    $sql = "INSERT INTO selecoes (nome, continente, grupo_id) VALUES (:nome, :continente, :grupo_id)";
-    $stmt = $this->pdo->prepare($sql);
-    return $stmt->execute([
-        ':nome' => $nome,
+  public function cadastrar($nome, $continente, $grupo_id){
+   $sql = "INSERT INTO selecoes (nome, continente, grupo_id) VALUES (:nome, :continente, :grupo_id)";
+   $stmt = $this->pdo->prepare($sql);
+   $ok = $stmt->execute([
+       ':nome' => $nome,
         ':continente' => $continente,
-        ':grupo_id' => $grupo_id
-        
+       ':grupo_id' => $grupo_id
     ]);
+    if ($ok) {
+        $selecaoId = (int) $this->pdo->lastInsertId();
+        $sqlClass = "INSERT INTO classificacao (grupo_id, selecao_id, pontos, jogos, vitorias, empates, derrotas, gols_pro, gols_contra, saldo_gols)
+                      VALUES (:grupo, :selecao, 0, 0, 0, 0, 0, 0, 0, 0)";
+      $stmtClass = $this->pdo->prepare($sqlClass);
+       $stmtClass->execute([
+            ':grupo' => $grupo_id,
+            ':selecao' => $selecaoId
+       ]);
+    }
+
+    return $ok;
+
 }
 
 public function buscarSelecao() {
