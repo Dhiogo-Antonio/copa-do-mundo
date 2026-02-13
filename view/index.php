@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="#usuarios">Usuários</a></li>
                 <li><a href="#selecoes">Seleções e Grupos</a></li>
-                <li><a href="#classificacao">Classificação</a></li>
+                <li><a href="#classificacoes">Classificação</a></li>
                 <li><a href="#jogos">Jogos</a></li>
             </ul>
         </nav>
