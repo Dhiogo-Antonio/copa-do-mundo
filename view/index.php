@@ -5,50 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="view/css/style.css">
-    <title>Inicio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            
-            padding: 200;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
+    <div class="fundo-colorido">
     <header>
         <nav>
             <ul>
@@ -63,7 +23,6 @@
     <section class="usuarios" id="usuarios">
 
     </section>
-    
 </body>
 </html>
 

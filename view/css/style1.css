@@ -6,61 +6,73 @@
 }
 
 body {
-    
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f4f4f4;
 }
 
-.container {
+div {
     background-color: #ffffff;
     padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     width: 400px;
+    transition: 0.3s ease;
 }
 
-.container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2a5298;
+div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 form label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
     font-size: 14px;
+    color: #333;
 }
 
-form input,
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
 form select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 form input:focus,
 form select:focus {
-    border-color: #2a5298;
+    border-color: #00A651;
     outline: none;
-    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+    box-shadow: 0 0 8px rgba(0, 166, 81, 0.5);
 }
 
+/* BOTÃO AZUL */
 form input[type="submit"] {
     margin-top: 20px;
-    background-color: #2a5298;
-    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
+    font-size: 16px;
+    color: white;
+
+    /* COR AZUL */
+    background-color: #0057B8;
+    transition: 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #1e3c72;
+    background-color: #003f8a; /* azul mais escuro ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
