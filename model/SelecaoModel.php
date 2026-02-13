@@ -71,7 +71,7 @@ public function buscarPorId($id){
 }
 
 public function atualizar($id, $nome, $continente, $grupo_id){
-    $sql = "UPDATE usuarios 
+    $sql = "UPDATE selecoes 
             SET nome = :nome,
                 continente = :continente,
                 grupo_id = :grupo_id

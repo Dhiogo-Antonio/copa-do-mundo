@@ -1,6 +1,6 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
 
 $gruposController = new GruposController($pdo);
 
@@ -14,14 +14,12 @@ $grupos = $gruposController->listar();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar Seleção</title>
    
     
 </head>
 <body>
      <link rel="stylesheet" href="css/style2.css">
-    <h2>Cadastrar Seleção</h2>
-
 <form method="post">
 
     <label>Nome:</label>
@@ -50,7 +48,7 @@ $grupos = $gruposController->listar();
 
 <?php 
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
 

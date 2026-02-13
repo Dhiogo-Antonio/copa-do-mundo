@@ -1,7 +1,7 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
 
@@ -32,6 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 ?>
+<head>
+    <title>Editar Usuário</title>
+</head>
 
 <link rel="stylesheet" href="css/style2.css">
 

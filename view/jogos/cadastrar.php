@@ -1,7 +1,7 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
 
 $selecaoController = new SelecaoController($pdo);
 $selecoes = $selecaoController->buscarSelecao();
@@ -18,7 +18,7 @@ $grupos = $gruposController->listar();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style2.css">
-    <title>Document</title>
+    <title>Cadastrar Jogo</title>
 </head>
 <style>
     body{
@@ -62,7 +62,8 @@ $grupos = $gruposController->listar();
         <br><br>
 
         <label>Data do Jogo:</label><br>
-        <input type="datetime-local" name="data_jogo" required>
+        <input type="datetime-local" name="data_jogo"
+       min="<?= date('Y-m-d\TH:i') ?>">
         <br><br>
 
         <button type="submit">Cadastrar</button><br>
@@ -75,10 +76,10 @@ $grupos = $gruposController->listar();
 
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $jogosController = new JogosController($pdo);
 $gruposController = new GruposController($pdo);

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Início</title>
 </head>
 <body>
     <header class="fundo-colorido">
@@ -20,15 +20,15 @@
             <ul>
                 <li><a href="#usuarios">Usuários</a></li>
                 <li><a href="#selecoes">Seleções e Grupos</a></li>
-                <li><a href="#classificacoes">Classificação</a></li>
                 <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#classificacoes">Classificação</a></li>
             </ul>
         </nav>
         </div>
     </header>
 
     
-<section class="boas-vindas">
+<div class="boas-vindas">
     <div class="container">
         <h1>Bem-vindo a Copa do Mundo 2026</h1>
         <p>
@@ -40,7 +40,7 @@
 
         <a href="#usuarios" class="btn-explorar">Explorar Dashboard</a>
     </div>
-</section>
+</div>
 
 
    
@@ -48,11 +48,11 @@
 </html>
 
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
 
 $usuarioController = new UsuarioController($pdo);
 $selecaoController = new SelecaoController($pdo);

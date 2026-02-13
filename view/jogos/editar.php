@@ -1,7 +1,7 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/model/JogosModel.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/model/JogosModel.php";
 
 $jogosModel = new JogosModel($pdo);
 

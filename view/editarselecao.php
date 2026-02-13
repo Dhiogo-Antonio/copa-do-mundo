@@ -1,6 +1,11 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+
+$gruposController = new GruposController($pdo);
+
+$grupos = $gruposController->listar();
 
 $selecaoController = new SelecaoController($pdo);
 
@@ -19,13 +24,19 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $id,
         $_POST['nome'],
         $_POST['continente'],
-        $_POST['grupo_id']
+      intval($_POST['grupo_id'])
+  
     );
 
     header("Location: index.php");
     exit;
 }
 ?>
+
+<head>
+    <title>Editar Seleção</title>
+</head>
+
 <link rel="stylesheet" href="css/style2.css">
 
 
@@ -34,8 +45,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     Continente: <input type="text" name="continente" value="<?= $selecao['continente'] ?>"><br><br>
 
-    Grupo: <input type="number" name="grupo" value="<?= $selecao['grupo_id'] ?>"><br><br>
-
+   <select name="grupo_id" required>
+    <?php foreach ($grupos as $grupo): ?>
+       <option value="<?= $grupo['id']; ?>"
+    <?= ($grupo['id'] == $selecao['grupo_id']) ? 'selected' : '' ?>>
+    Grupo <?= $grupo['nome']; ?>
+</option>
+    <?php endforeach; ?>
+</select>
+<br><br>
     <button type="submit">Atualizar</button>
     <a href="index.php" class="btn-voltar">Voltar</a>
 </form>
+
+
+  

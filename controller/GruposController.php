@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/model/GruposModel.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/model/GruposModel.php";
 
 class GruposController{
     private $gruposModel;

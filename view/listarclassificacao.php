@@ -22,7 +22,7 @@ echo "<thead>
             <th>Vitórias</th>
             <th>Empates</th>
             <th>Derrotas</th>
-            <th>Gols Pro</th>
+            <th>Gols Feitos</th>
             <th>Gols Contra</th>
             <th>Saldo de Gols</th>
         </tr>

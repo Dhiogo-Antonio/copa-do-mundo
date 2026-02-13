@@ -1,7 +1,7 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/model/JogosModel.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/model/selecaoModel.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/model/JogosModel.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/model/selecaoModel.php";
 
 class JogosController {
 
@@ -18,7 +18,7 @@ class JogosController {
 
    public function listar() {
     $jogos = $this->jogosModel->listar();
-    include "C:/Turma2/xampp/htdocs/copa-do-mundo/view/jogos/listar.php";
+    include "C:/xampp/htdocs/copa-do-mundo/view/jogos/listar.php";
 }
 
 

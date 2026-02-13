@@ -1,6 +1,6 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 
 $selecaoController = new SelecaoController($pdo);
 $selecoes = $selecaoController->buscarSelecao();
@@ -11,8 +11,8 @@ $selecoes = $selecaoController->buscarSelecao();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style1.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Cadatrar Usuário</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@ $selecoes = $selecaoController->buscarSelecao();
 <?php
 
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 
 
 

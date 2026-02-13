@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
-    <title>Document</title>
+    <title>Cadastrar Grupo</title>
 </head>
 <body>
-    <h2>Cadastrar Grupo</h2>
 
 <form method="POST">
     <input type="number" name="nome" required>
@@ -18,8 +17,8 @@
 
 <?php 
 
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
 
 $gruposController = new GruposController($pdo);
 

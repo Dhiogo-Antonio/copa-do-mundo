@@ -1,6 +1,6 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
 
 $jogosController = new JogosController($pdo);
 
@@ -34,7 +34,6 @@ $jogo = $jogosController->buscarPorId($id);
 </head>
 <body>
 <link rel="stylesheet" href="../css/style2.css">
-<h2>Finalizar Jogo</h2>
 
 <form method="POST">
     <label>Gols Casa:</label>

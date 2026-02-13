@@ -168,7 +168,8 @@
         }
 
         .tabela-usuarios {
-    width: 100%;
+    width: 85%;
+    justify-self: center;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
@@ -233,7 +234,8 @@
 
 
         .tabela-classificacao {
-    width: 100%;
+    width: 85%;
+    justify-self: center;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
@@ -261,7 +263,8 @@
 }
 
 .tabela-jogos {
-    width: 100%;
+    width: 85%;
+    justify-self: center;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
@@ -325,7 +328,8 @@
 }
 
 .tabela-selecoes {
-    width: 100%;
+    width: 85%;
+    justify-self: center;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
@@ -398,4 +402,8 @@
 .cadastro{
     color: blue;
     text-decoration: underline;
+}
+
+section{
+margin-top: 20vh;
 }
