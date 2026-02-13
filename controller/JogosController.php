@@ -31,4 +31,8 @@ class JogosController {
     return $this->jogosModel->finalizar($id, $golsCasa, $golsFora);
 }
 
+public function deletar($id) {
+    return $this->jogosModel->deletar($id);
+}
+
 }

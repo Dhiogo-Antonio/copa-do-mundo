@@ -22,8 +22,7 @@ $grupos = $gruposController->listar();
 </head>
 
 <body>
-    <h2>Cadastrar Jogo</h2>
-
+  
     <form method="POST">
 
         <label>Grupo:</label>
@@ -62,7 +61,7 @@ $grupos = $gruposController->listar();
         <br><br>
 
         <button type="submit">Cadastrar</button>
-        <button type="submit">Voltar</button>
+       <a href="../index.php">Voltar</a>
 
     </form>
 </body>
