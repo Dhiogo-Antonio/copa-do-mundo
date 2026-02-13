@@ -31,15 +31,15 @@ require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/db/database.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
-
+require_once "C:/Turma2/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
 
 $usuarioController = new UsuarioController($pdo);
 $selecaoController = new SelecaoController($pdo);
 $jogosController = new JogosController($pdo);
-
+$classificacaoController = new ClassificacaoController($pdo);
 
 $usuarios = $usuarioController->listar();
 $selecoes = $selecaoController->listar();
 $jogos = $jogosController->listar();
-
+$classificacao = $classificacaoController->casa();
 ?>

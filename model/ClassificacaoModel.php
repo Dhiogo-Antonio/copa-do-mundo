@@ -56,4 +56,26 @@ class ClassificacaoModel {
             ':selecao' => $selecao_id
         ]);
     }
+public function listarTodos() {
+    $sql = "SELECT 
+                id,
+                grupo_id,
+                selecao_id,
+                pontos,
+                jogos,
+                vitorias,
+                empates,
+                derrotas,
+                gols_pro,
+                gols_contra,
+                saldo_gols
+            FROM classificacao
+            ORDER BY id ASC";
+
+    return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
 }
