@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/02/2026 às 14:28
+-- Tempo de geração: 13/02/2026 às 19:21
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -41,14 +41,6 @@ CREATE TABLE `classificacao` (
   `saldo_gols` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `classificacao`
---
-
-INSERT INTO `classificacao` (`id`, `grupo_id`, `selecao_id`, `pontos`, `jogos`, `vitorias`, `empates`, `derrotas`, `gols_pro`, `gols_contra`, `saldo_gols`) VALUES
-(9, 8, 65, 123, 32312, 21312, 4142, 42, 2, 56, 67),
-(11, 7, 64, 12, 1, 1, 1, 12, 2, 3, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -85,14 +77,6 @@ CREATE TABLE `jogos` (
   `status` enum('agendado','finalizado') DEFAULT 'agendado'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `jogos`
---
-
-INSERT INTO `jogos` (`id`, `grupo_id`, `selecao_casa_id`, `selecao_fora_id`, `gols_casa`, `gols_fora`, `data_jogo`, `status`) VALUES
-(1, 7, 64, 65, 6, 28, '1901-02-23 07:53:00', 'finalizado'),
-(2, 8, 64, 64, 21, 2, '2026-02-13 08:59:00', 'finalizado');
-
 -- --------------------------------------------------------
 
 --
@@ -111,11 +95,11 @@ CREATE TABLE `selecoes` (
 --
 
 INSERT INTO `selecoes` (`id`, `nome`, `continente`, `grupo_id`) VALUES
-(64, 'Brasil', 'América do Sul', 7),
-(65, 'Brasil', 'América do Sul', 7),
-(66, 'Brasil', 'América do Sul', 8),
 (67, 'Brasil', 'América do Sul', 8),
-(68, 'França', 'Europa', 8);
+(68, 'França', 'Europa', 8),
+(69, 'India', 'Asia', 7),
+(70, 'Russia', 'Asia', 8),
+(71, 'Portugal', 'Europa', 7);
 
 -- --------------------------------------------------------
 
@@ -138,8 +122,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `idade`, `email`, `senha`, `cargo`, `selecao_id`) VALUES
-(3, 'dhiogo', 16, 'dhiogo@gmail', '1234', 'Jogador', 65),
-(7, 'Gabriel Machado', 17, 'gabriel@gmail', '1234', 'Jogador', 66);
+(8, 'Gabriel Machado', 17, 'gabriel@gmail1', 'Tudomenosdhiogo', 'Jogador', 67),
+(9, 'Aninha', 14, 'aninha@gmail.com', 'Tudomenosdhiogo', 'Jogador', 67);
 
 --
 -- Índices para tabelas despejadas
@@ -151,7 +135,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `idade`, `email`, `senha`, `cargo`, `selec
 ALTER TABLE `classificacao`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `grupo_id` (`grupo_id`,`selecao_id`),
-  ADD KEY `selecao_id` (`selecao_id`);
+  ADD KEY `selecao_id` (`selecao_id`),
+  ADD KEY `gols_pro` (`gols_pro`,`gols_contra`,`saldo_gols`);
 
 --
 -- Índices de tabela `grupos`
@@ -192,7 +177,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `classificacao`
 --
 ALTER TABLE `classificacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `grupos`
@@ -204,19 +189,19 @@ ALTER TABLE `grupos`
 -- AUTO_INCREMENT de tabela `jogos`
 --
 ALTER TABLE `jogos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `selecoes`
 --
 ALTER TABLE `selecoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restrições para tabelas despejadas
