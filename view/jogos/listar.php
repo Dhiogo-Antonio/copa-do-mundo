@@ -37,7 +37,7 @@ foreach ($jogos as $jogo) {
                onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
                Deletar
             </a> |
-            <a href='cadastrar.php'>Cadastrar</a>
+            <a href='./jogos/cadastrar.php'>Cadastrar</a>
           </td>";
 
     echo "</tr>";
