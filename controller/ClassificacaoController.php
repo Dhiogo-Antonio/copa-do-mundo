@@ -16,7 +16,7 @@ class ClassificacaoController {
     }
 
   public function casa() {
-    $selecoes = $this->classificacaoModel->listarTodos();
+    $classificacao = $this->classificacaoModel->listarTodos();
     require __DIR__ . '/../view/listarclassificacao.php';
 }
 }
