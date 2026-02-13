@@ -41,12 +41,12 @@ foreach ($jogos as $jogo) {
     echo "<td>{$jogo['status']}</td>";
     
     echo "<td>
-            <a href='jogos/finalizar.php?id={$id}'>Finalizar</a> |
-            <a href='deletar.php?id={$id}'
+            <a href='jogos/finalizar.php?id={$id}' class='btn-finalizar'>Finalizar</a> |
+            <a href='deletar.php?id={$id}' class='btn-deletar'
                onclick=\"return confirm('Tem certeza que deseja excluir este jogo?')\">
                Deletar
             </a> |
-            <a href='./jogos/cadastrar.php'>Cadastrar</a>
+            <a href='./jogos/cadastrar.php' class='btn-cadastrar'>Cadastrar</a>
           </td>";
 
     echo "</tr>";
