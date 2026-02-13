@@ -12,13 +12,13 @@ $selecoes = $selecaoController->buscarSelecao();
 
 $id = $_GET['id'] ?? null;
 
-if(!$id){
+if (!$id) {
     die("ID inválido");
 }
 
 $usuario = $usuarioController->buscar($id);
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuarioController->atualizar(
         $id,
         $_POST['nome'],
@@ -40,18 +40,23 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     Idade: <input type="number" name="idade" value="<?= $usuario['idade'] ?>"><br><br>
 
-<label for="selecao">Seleção representante:</label>
+    <label for="selecao">Seleção representante:</label>
 
-  <select name="selecao_id" required>
-    <option value="">Selecione</option>
-    <?php foreach ($selecoes as $selecao): ?>
-        <option value="<?= $selecao['id']; ?>">
-            <?= $selecao['nome']; ?>
-        </option>
-    <?php endforeach; ?>
-  </select>
-  
-    Cargo: <input type="text" name="cargo" value="<?= $usuario['cargo'] ?>"><br><br>
+    <select name="selecao_id" required>
+        <option value="">Selecione</option>
+        <?php foreach ($selecoes as $selecao): ?>
+            <option value="<?= $selecao['id']; ?>">
+                <?= $selecao['nome']; ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+
+    <select name="cargo" id="cargo">
+        <option value="Jogador">Jogador</option>
+        <option value="Técnico">Técnico</option>
+        <option value="Arbito">Arbito</option>
+        <option value="Bandeira">Bandeira</option>
+    </select>
     Email: <input type="email" name="email" value="<?= $usuario['email'] ?>"><br><br>
 
     <button type="submit">Atualizar</button>
