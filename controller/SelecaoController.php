@@ -16,8 +16,26 @@ class SelecaoController {
     }
 
     public function listar() {
-    return $this->selecaoModel->listarTodos();
+    $selecoes = $this->selecaoModel->listarTodos();
+    require __DIR__ . '/../View/listarselecao.php';
 }
+
+public function deletar($id){
+    return $this->selecaoModel->deletar($id);
+}
+
+
+    public function buscar($id){
+    return $this->selecaoModel->buscarPorId($id);
+}
+
+    public function atualizar($id, $nome, $continente, $grupo_id){
+        return $this->selecaoModel->atualizar($id, $nome, $continente, $grupo_id);
+    }
+
+
+
+
 
 
 }

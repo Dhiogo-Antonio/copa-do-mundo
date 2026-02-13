@@ -11,7 +11,6 @@ class UsuarioController{
 
     public function listar(){
         $usuarios = $this->usuarioModel->buscarTodos();
-        $selecoes = $this->usuarioModel->buscarTodos();
        include_once "C:/Turma2/xampp/htdocs/copa-do-mundo/view/listar.php";
        return;
     }

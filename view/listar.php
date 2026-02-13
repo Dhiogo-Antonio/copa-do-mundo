@@ -1,10 +1,13 @@
 <?php
 
+echo "<section id='#usuarios'>";
 if(empty($usuarios)){
     echo "<p>Nenhum usuário encontrado</p>";
     
     return;
 }
+
+
 
 echo "<table border='1' cellpadding='5' cellspacing='0'>";
 
@@ -31,13 +34,13 @@ foreach($usuarios as $usuario){
                onclick=\"return confirm('Tem certeza que deseja excluir este usuário?')\">
                Deletar
             </a> |
-            <a href='View/Usuario/cadastrar.php'>Cadastrar</a>
+            <a href='cadastro.php'>Cadastrar</a>
           </td>";
     echo "</tr>";
 }
 
 echo "</table>";
 
-
+echo "</section>";
 
 ?>
