@@ -97,3 +97,51 @@ a{
     text-decoration: none;
     margin-left: 13.5vh;
 }
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    form {
+        width: 100%;
+        max-width: 420px;
+        padding: 25px 20px;
+    }
+
+    a {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    form {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    form label {
+        font-size: 13px;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="email"],
+    form input[type="password"],
+    form select {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    form input[type="submit"],
+    form button[type="submit"],
+    a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

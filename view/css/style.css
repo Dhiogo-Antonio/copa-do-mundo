@@ -407,3 +407,131 @@
 section{
 margin-top: 20vh;
 }
+
+
+@media (max-width: 1024px) {
+
+    .navegacao {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fundo-colorido {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 160px;
+        margin-bottom: 15px;
+    }
+
+    .boas-vindas h1 {
+        font-size: 32px;
+    }
+
+    section {
+        margin-top: 10vh;
+    }
+
+    .tabela-usuarios,
+    .tabela-classificacao,
+    .tabela-jogos,
+    .tabela-selecoes {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .fundo-colorido {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+ 
+    .navegacao {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+  
+    .tabela-usuarios,
+    .tabela-classificacao,
+    .tabela-jogos,
+    .tabela-selecoes {
+        display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 120px;
+    }
+
+    .fundo-colorido h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    
+    .tabela-usuarios,
+    .tabela-classificacao,
+    .tabela-jogos,
+    .tabela-selecoes {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
