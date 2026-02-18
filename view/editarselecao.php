@@ -1,7 +1,7 @@
 <?php
-require_once "C:/turma2/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
-require_once "C:/turma2/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
-require_once "C:/turma2/turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
 
 $gruposController = new GruposController($pdo);
 
