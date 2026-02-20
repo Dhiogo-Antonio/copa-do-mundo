@@ -408,6 +408,45 @@ section{
 margin-top: 20vh;
 }
 
+.tabela-grupos {
+    width: 85%;
+    justify-self: center;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.tabela-grupos th,
+.tabela-grupos td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela-grupos th {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+}
+
+.tabela-grupos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabela-grupos tr:hover {
+    background-color: #e6f0ff;
+}
+
+
+.tabela-grupos a {
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
 
 @media (max-width: 1024px) {
 
@@ -439,7 +478,8 @@ margin-top: 20vh;
     .tabela-usuarios,
     .tabela-classificacao,
     .tabela-jogos,
-    .tabela-selecoes {
+    .tabela-selecoes,
+    .tabela-grupos {
         width: 95%;
     }
 }
@@ -492,7 +532,8 @@ margin-top: 20vh;
     .tabela-usuarios,
     .tabela-classificacao,
     .tabela-jogos,
-    .tabela-selecoes {
+    .tabela-selecoes,
+    .tabela-grupos {
         display: block;
         width: 95%;
         margin-left: auto;
@@ -527,7 +568,8 @@ margin-top: 20vh;
     .tabela-usuarios,
     .tabela-classificacao,
     .tabela-jogos,
-    .tabela-selecoes {
+    .tabela-selecoes,
+    .tabela-grupos {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -535,3 +577,4 @@ margin-top: 20vh;
         white-space: nowrap;
     }
 }
+

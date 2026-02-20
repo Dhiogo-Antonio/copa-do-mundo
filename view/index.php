@@ -19,7 +19,8 @@
         <nav>
             <ul>
                 <li><a href="#usuarios">Usuários</a></li>
-                <li><a href="#selecoes">Seleções e Grupos</a></li>
+                <li><a href="#selecoes">Seleções</a></li>
+                <li><a href="#grupos">Grupos</a></li>
                 <li><a href="#jogos">Jogos</a></li>
                 <li><a href="#classificacoes">Classificação</a></li>
             </ul>
@@ -52,14 +53,17 @@ require_once "C:/turma2/xampp/htdocs/copa-do-mundo/db/database.php";
 require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/UsuarioController.php";
 require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/SelecaoController.php";
 require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/JogosController.php";
+require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/GruposController.php";
 require_once "C:/turma2/xampp/htdocs/copa-do-mundo/controller/ClassificacaoController.php";
 
 $usuarioController = new UsuarioController($pdo);
 $selecaoController = new SelecaoController($pdo);
 $jogosController = new JogosController($pdo);
+$gruposController = new GruposController($pdo);
 $classificacaoController = new ClassificacaoController($pdo);
 
 $usuarios = $usuarioController->listar();
+$grupos = $gruposController->buscartudo();
 $selecoes = $selecaoController->listar();
 $jogos = $jogosController->listar();
 $classificacao = $classificacaoController->casa();
