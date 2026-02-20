@@ -2,6 +2,8 @@
 
 echo "<section id='jogos'>";
 
+echo "<h1>Jogos do dia</h1>";
+
 if (empty($jogos)) {
     echo "<div class='links'>";
     echo "<p>Nenhum jogo encontrado!</p>";
@@ -11,7 +13,6 @@ echo "</div>";
     return;
 }
 
-echo "<h1>Jogos do dia</h1>";
 
 echo "<table class='tabela-jogos'>";
 echo "<thead>
