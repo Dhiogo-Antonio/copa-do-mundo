@@ -2,7 +2,7 @@
 
 echo "<section id='jogos'>";
 
-echo "<h1>Jogos do dia</h1>";
+echo "<h1>Partidas</h1>";
 
 if (empty($jogos)) {
     echo "<div class='links'>";

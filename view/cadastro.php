@@ -23,7 +23,7 @@ $selecoes = $selecaoController->buscarSelecao();
             <input type="text" name="nome" required><br>
 
             <label for="idade">Idade:</label>
-            <input type="number" name="idade" required><br>
+            <input type="number" name="idade" min="15" max="100" required><br>
 
             <label for="selecao">Seleção representante:</label>
             <select name="selecao_id" required>

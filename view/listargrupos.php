@@ -1,7 +1,7 @@
 <?php
 echo "<section id='grupos'>";
 
-echo "<h1>Grupos Cadastradas</h1>";
+echo "<h1>Grupos Cadastrados</h1>";
 
 if(empty($grupos)){
     echo "<div class='links'>";

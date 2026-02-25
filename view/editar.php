@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <form method="POST">
     Nome: <input type="text" name="nome" value="<?= $usuario['nome'] ?>"><br><br>
 
-    Idade: <input type="number" name="idade" value="<?= $usuario['idade'] ?>"><br><br>
+    Idade: <input type="number" name="idade" min="15" max="100" value="<?= $usuario['idade'] ?>"><br><br>
 
     <label for="selecao">Seleção representante:</label>
 
